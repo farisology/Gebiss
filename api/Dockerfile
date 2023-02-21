@@ -10,8 +10,7 @@ COPY ./requirements.txt /code/requirements.txt
 # installing deps
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 RUN apt-get update && apt-get install -y \
-    build-essential \
-    libgomp1
+    build-essential
 # copy our api
 COPY ./app /code/app
 
